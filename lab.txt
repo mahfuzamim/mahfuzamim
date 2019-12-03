@@ -1,0 +1,87 @@
+echo ?enter basic salary?
+read bs
+hra=$(( $bs * 10 / 100 ))
+echo $hra
+ta=$(( $bs * 15 / 100 ))
+echo $ta
+da=$(( $bs * 2 / 100 ))
+echo $da
+tax=$(( $bs * 5 / 100 ))
+echo $tax
+pf=$(( $bs * 10 / 100 ))
+echo $pf
+add=$(( $hra + $ta + $da ))
+echo $add
+ded=$(( $tax + $pf ))
+echo $ded
+netsal=$(( $bs + $add - $ded ))
+echo "net salary is $netsal"
+
+
+
+echo "Enter Product price"
+read pp
+if [ $pp -lt 1000 ]
+then
+tax=$(( $pp * 2 / 100 ))
+disc=$(( $pp * 10 / 100 ))
+else
+tax=$(( $pp * 5 / 100 ))
+disc=$(( $pp * 20 / 100 ))
+
+fi
+
+pa=$(( $pp + $tax - $disc ))
+
+echo "Ammount paid: $pa"
+
+
+echo -n "Enter a number: "
+read a
+echo -n "Enter another Number: "
+read b
+echo -n "Enter an operator: "
+read c
+case $c in
++)x=$(( $a + $b )) ;;
+-)x=$(( $a - $b )) ;;
+/)x=$(( $a / $b )) ;;
+*)x=$(( $a * $b )) ;;
+esac
+echo $x
+
+
+
+echo "Enter a String"
+read st
+echo "${#st} is the length of your string"
+
+
+
+echo "Enter a Year"
+read yr
+
+lpYr=$"$yr % 4"
+if [[ $lpYr -eq 0 ]]
+then
+echo "$yr is Leap Year"
+else
+echo "$yr is not Leap Year"
+
+
+
+echo "Enter Product price"
+read pp
+if [ $pp -lt 1000 ]
+then
+tax=$(( $pp * 2 / 100 ))
+disc=$(( $pp * 10 / 100 ))
+else
+tax=$(( $pp * 5 / 100 ))
+disc=$(( $pp * 20 / 100 ))
+
+fi
+
+pa=$(( $pp + $tax - $disc ))
+
+echo "Ammount paid: $pa"
