@@ -1,0 +1,34 @@
+echo -n "Enter first number: "
+read f
+echo -n "Enter second number: "
+read s
+echo -n "Enter third number: "
+read t
+
+
+if [ $f -gt $s -a $f -gt $t ]
+then
+
+   echo "First value is big"
+elif [ $s -gt $t ]
+ then
+   echo "Second value is big"
+else 
+   echo "Third value is big"
+
+
+echo "Enter value of a";
+read a
+echo "Enter value of b";
+read b
+c= expr $a + $b
+
+
+
+str1="AIUB"
+str2="AIUB"
+
+if [ "$str1" = "$str2" ]; then 
+   echo "String are same"
+else
+  echo "String are not same"
